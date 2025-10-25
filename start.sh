@@ -1,14 +1,26 @@
-#!/bin/bash#!/bin/bash#!/bin/bash#!/bin/bash
+#!/bin/bash#!/bin/bash#!/bin/bash#!/bin/bash#!/bin/bash
 
 
 
 # BridgeAI Tech - Railway Deployment Script
 
-# Starts the backend server for production
+
+
+echo "🚀 Starting BridgeAI Tech Backend..."# BridgeAI Tech - Railway Deployment Script
+
+
+
+# Navigate to backend directory# Starts the backend server for production
+
+cd backend
 
 # BridgeAI Tech - Railway Deployment Script
 
-echo "🚀 Starting BridgeAI Tech Backend..."
+# Start the backend server
+
+echo "✅ Starting server on port $PORT..."echo "🚀 Starting BridgeAI Tech Backend..."
+
+npm start
 
 # Starts the backend server for production
 
