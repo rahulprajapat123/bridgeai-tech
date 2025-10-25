@@ -1,4 +1,4 @@
-#!/bin/bash#!/bin/bash#!/bin/bash
+#!/bin/bash#!/bin/bash#!/bin/bash#!/bin/bash
 
 
 
@@ -6,11 +6,24 @@
 
 # Starts the backend server for production
 
-# BridgeAI Tech - Railway Deployment Script# BridgeAI Tech - Complete Startup Script
+# BridgeAI Tech - Railway Deployment Script
 
 echo "🚀 Starting BridgeAI Tech Backend..."
 
-# Starts the backend server for production# This script starts both backend and frontend servers
+# Starts the backend server for production
+
+# Navigate to backend directory
+
+cd backend# BridgeAI Tech - Railway Deployment Script# BridgeAI Tech - Complete Startup Script
+
+
+
+# Start the backend server (Railway uses PORT environment variable)echo "🚀 Starting BridgeAI Tech Backend..."
+
+echo "✅ Starting server on port $PORT..."
+
+npm start# Starts the backend server for production# This script starts both backend and frontend servers
+
 
 # Navigate to backend directory
 

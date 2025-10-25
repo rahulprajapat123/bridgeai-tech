@@ -157,6 +157,22 @@ const transporter = nodemailer.createTransport({
 
 // ==================== ROUTES ====================
 
+// Root endpoint
+app.get('/', (req, res) => {
+  res.json({ 
+    message: 'BridgeAI Tech API',
+    version: '1.0.0',
+    status: 'running',
+    endpoints: {
+      health: '/api/health',
+      blog: '/api/blog',
+      caseStudies: '/api/case-studies',
+      contact: '/api/contact',
+      auth: '/api/auth/login'
+    }
+  });
+});
+
 // Health Check
 app.get('/api/health', (req, res) => {
   res.json({ 
