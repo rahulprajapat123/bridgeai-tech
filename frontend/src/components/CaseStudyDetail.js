@@ -8,10 +8,6 @@ function CaseStudyDetail() {
   const [caseStudy, setCaseStudy] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    fetchCaseStudy();
-  }, [slug]);
-
   const fetchCaseStudy = async () => {
     try {
       const response = await axios.get(`/case-studies/${slug}`);
@@ -22,6 +18,11 @@ function CaseStudyDetail() {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    fetchCaseStudy();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [slug]);
 
   if (loading) {
     return (

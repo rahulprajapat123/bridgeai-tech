@@ -8,10 +8,6 @@ function BlogDetail() {
   const [post, setPost] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    fetchPost();
-  }, [slug]);
-
   const fetchPost = async () => {
     try {
       const response = await axios.get(`/blog/${slug}`);
@@ -22,6 +18,11 @@ function BlogDetail() {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    fetchPost();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [slug]);
 
   if (loading) {
     return (

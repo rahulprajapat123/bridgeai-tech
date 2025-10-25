@@ -19,7 +19,7 @@ function ContactPage() {
     setStatus({ type: '', message: '' });
 
     try {
-      const response = await axios.post('/contact', formData);
+      await axios.post('/contact', formData);
       setStatus({
         type: 'success',
         message: 'Thank you! We\'ll get back to you within 24 hours.'
